@@ -40,7 +40,7 @@ export const PostRTKUpdate = () => {
             <h2>Cập nhật bài đăng</h2>
             <form>
                 <div className='row justify-content-center'>
-                    <div className='col-auto'>
+                    <div className='col'>
                         <label for="postTitle" className="form-label">Tiêu đề mới:</label>
                         <input
                             type="text"
@@ -53,7 +53,7 @@ export const PostRTKUpdate = () => {
                     </div>
                 </div>
                 <div className='row justify-content-center'>
-                    <div className='col-auto'>
+                    <div className='col'>
                         <label for="postContent" className="form-label">Nội dung bài đăng mới:</label>
                         <textarea
                             className='form-control'

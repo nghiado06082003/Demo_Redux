@@ -47,4 +47,9 @@ app.put("/api/posts/:postId", (req, res) => {
     res.json(posts.find(post => post.id == req.params.postId))
 })
 
+app.delete("/api/posts/:postId", (req, res) => {
+    posts = posts.filter(post => post.id != req.params.postId)
+    res.json()
+})
+
 app.listen(8080, () => { console.log("Running on port 8080") });

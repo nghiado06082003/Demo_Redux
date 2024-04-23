@@ -11,7 +11,7 @@ export const PostSingle = () => {
 
     useEffect(() => {
         dispatch(fetchPost(postId))
-    }, [post, dispatch])
+    }, [dispatch])
 
     let content = null
     if (post == {}) {

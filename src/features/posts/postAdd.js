@@ -41,7 +41,7 @@ export const PostAdd = () => {
             <h2>Thêm một bài đăng</h2>
             <form>
                 <div className='row justify-content-center'>
-                    <div className='col-auto'>
+                    <div className='col'>
                         <label for="postTitle" className="form-label">Tiêu đề:</label>
                         <input
                             type="text"
@@ -54,7 +54,7 @@ export const PostAdd = () => {
                     </div>
                 </div>
                 <div className='row justify-content-center'>
-                    <div className='col-auto'>
+                    <div className='col'>
                         <label for="postContent" className="form-label">Nội dung bài đăng:</label>
                         <textarea
                             className='form-control'

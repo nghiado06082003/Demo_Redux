@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useGetPostsQuery } from '../../api/apiSlice'
+import { useGetPostsQuery, useDeletePostMutation } from '../../api/apiSlice'
 import classnames from 'classnames'
 
 export const PostsRTKList = () => {
@@ -15,6 +15,7 @@ export const PostsRTKList = () => {
     } = useGetPostsQuery()
 
     let content = null
+    const [deletePost] = useDeletePostMutation()
 
     if (isLoading) {
         content = (
@@ -41,6 +42,7 @@ export const PostsRTKList = () => {
                             <td>
                                 <Link to={`/postsRTK/${post.id}`} className='btn btn-primary'>Xem chi tiết</Link>
                                 <Link to={`/postsRTK/update/${post.id}`} className='btn btn-warning mx-2'>Cập nhật nội dung</Link>
+                                <button className='btn btn-danger' onClick={async () => { await deletePost(post.id).unwrap() }}>Xoá bài đăng</button>
                             </td>
                         </tr>
                     ))}

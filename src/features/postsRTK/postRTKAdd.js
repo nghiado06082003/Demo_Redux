@@ -6,9 +6,6 @@ import { useAddPostMutation } from '../../api/apiSlice'
 export const PostRTKAdd = () => {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [addRequestStatus, setAddRequestStatus] = useState('idle')
-
-    const dispatch = useDispatch()
 
     const [addPost, { isLoading }] = useAddPostMutation()
 
@@ -40,7 +37,7 @@ export const PostRTKAdd = () => {
             <h2>Thêm một bài đăng</h2>
             <form>
                 <div className='row justify-content-center'>
-                    <div className='col-auto'>
+                    <div className='col'>
                         <label for="postTitle" className="form-label">Tiêu đề:</label>
                         <input
                             type="text"
@@ -53,7 +50,7 @@ export const PostRTKAdd = () => {
                     </div>
                 </div>
                 <div className='row justify-content-center'>
-                    <div className='col-auto'>
+                    <div className='col'>
                         <label for="postContent" className="form-label">Nội dung bài đăng:</label>
                         <textarea
                             className='form-control'
