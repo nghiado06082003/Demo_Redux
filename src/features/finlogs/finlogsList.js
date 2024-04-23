@@ -8,13 +8,13 @@ export const FinLogsList = () => {
 	return (
 		<div className='container-md'>
 			<h2>Danh sách các khoản</h2>
-			<div className='row justify-content-center'>
+			<div className='row'>
 				<div className='col-auto'>
 					<Link className='btn btn-primary' to="/finlogs/add">Thêm khoản mới</Link>
 				</div>
 			</div>
 			<div className='row justify-content-center'>
-				<div className='col-auto'>
+				<div className='col'>
 					<table class="table">
 						<thead>
 							<tr>

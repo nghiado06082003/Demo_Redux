@@ -40,7 +40,7 @@ export const PostsRTKList = () => {
                             <td>{post.title}</td>
                             <td>
                                 <Link to={`/postsRTK/${post.id}`} className='btn btn-primary'>Xem chi tiết</Link>
-                                <Link to={`/postsRTK/update/${post.id}`} className='btn btn-warning'>Cập nhật nội dung</Link>
+                                <Link to={`/postsRTK/update/${post.id}`} className='btn btn-warning mx-2'>Cập nhật nội dung</Link>
                             </td>
                         </tr>
                     ))}
@@ -59,19 +59,15 @@ export const PostsRTKList = () => {
     return (
         <div className='container-md'>
             <h2>Danh sách bài đăng - dùng RTK query </h2>
-            <div className='row justify-content-center'>
+            <div className='row'>
                 <div className='col-auto'>
                     <Link className='btn btn-primary' to="/postsRTK/add">Thêm bài đăng mới</Link>
+                    <button className='btn btn-primary mx-2' onClick={refetch}>Tải lại bài đăng</button>
                 </div>
             </div>
             <div className='row justify-content-center'>
-                <div className='col-auto'>
+                <div className='col'>
                     {content}
-                </div>
-            </div>
-            <div className='row justify-content-center'>
-                <div className='col-auto'>
-                    <button className='btn btn-primary' onClick={refetch}>Tải lại bài đăng</button>
                 </div>
             </div>
         </div>

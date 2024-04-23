@@ -32,6 +32,7 @@ export const PostsList = () => {
 					<tr>
 						<th scope="col">Mã bài đăng</th>
 						<th scope="col">Tiêu đề</th>
+						<th scope='col'>Hành động</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -55,13 +56,13 @@ export const PostsList = () => {
 	return (
 		<div className='container-md'>
 			<h2>Danh sách bài đăng</h2>
-			<div className='row justify-content-center'>
+			<div className='row'>
 				<div className='col-auto'>
 					<Link className='btn btn-primary' to="/posts/add">Thêm bài đăng mới</Link>
 				</div>
 			</div>
 			<div className='row justify-content-center'>
-				<div className='col-auto'>
+				<div className='col'>
 					{content}
 				</div>
 			</div>
